@@ -6,11 +6,12 @@
 /*   By: lelanglo <lelanglo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 10:34:02 by lelanglo          #+#    #+#             */
-/*   Updated: 2025/02/24 13:05:25 by lelanglo         ###   ########.fr       */
+/*   Updated: 2025/02/24 14:14:35 by lelanglo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal_utils.hpp"
+#include "WrongCat.hpp"
 
 int main()
 {
@@ -25,5 +26,15 @@ int main()
 	delete meta;
 	delete j;
 	delete i;
-	return 0;
+	
+	std::cout << "\n\ntest Wrong\n\n";
+	
+	const WrongAnimal* k = new WrongAnimal();
+	const WrongAnimal* g = new WrongCat();
+	std::cout << k->getType() << " " << std::endl;
+	std::cout << g->getType() << " " << std::endl;
+	k->makeSound();
+	g->makeSound();
+	delete g;
+	delete k;
 }

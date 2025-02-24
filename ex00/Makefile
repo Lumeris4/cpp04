@@ -5,7 +5,7 @@ NAME = animal
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -g3 -std=c++98
 
-SRCS = main.cpp Animal.cpp Animal_utils.cpp
+SRCS = main.cpp Animal.cpp Animal_utils.cpp WrongCat.cpp WrongAnimal.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
