@@ -6,7 +6,7 @@
 /*   By: lelanglo <lelanglo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 10:56:13 by lelanglo          #+#    #+#             */
-/*   Updated: 2025/02/24 12:15:12 by lelanglo         ###   ########.fr       */
+/*   Updated: 2025/02/24 13:01:11 by lelanglo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class Dog: public Animal
 	Dog(const Dog &copy);
 	Dog &operator=(const Dog &other);
 	~Dog();
+	void makeSound() const;
 };
 
 class Cat: public Animal
@@ -29,4 +30,5 @@ class Cat: public Animal
 	Cat(const Cat &copy);
 	Cat &operator=(const Cat &other);
 	~Cat();
+	void makeSound() const;
 };

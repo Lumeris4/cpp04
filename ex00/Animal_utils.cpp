@@ -6,7 +6,7 @@
 /*   By: lelanglo <lelanglo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 11:07:29 by lelanglo          #+#    #+#             */
-/*   Updated: 2025/02/24 12:14:04 by lelanglo         ###   ########.fr       */
+/*   Updated: 2025/02/24 12:57:38 by lelanglo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ Dog::Dog(const Dog &copy): Animal(copy)
 
 Dog &Dog::operator=(const Dog &other)
 {
+	this->_type = other._type;
 	std::cout << "Operator Dog called\n";
 	return (*this);
 }
@@ -33,6 +34,11 @@ Dog &Dog::operator=(const Dog &other)
 Dog::~Dog()
 {
 	std::cout << "Destrucor Dog called\n";
+}
+
+void Dog::makeSound() const
+{
+	std::cout << "OUAF OUAF\n";
 }
 
 Cat::Cat(): Animal()
@@ -49,6 +55,7 @@ Cat::Cat(const Cat &copy): Animal(copy)
 
 Cat &Cat::operator=(const Cat &other)
 {
+	this->_type = other._type;
 	std::cout << "Operator Cat called\n";
 	return (*this);
 }
@@ -56,4 +63,9 @@ Cat &Cat::operator=(const Cat &other)
 Cat::~Cat()
 {
 	std::cout << "Destrucor Cat called\n";
+}
+
+void Cat::makeSound() const
+{
+	std::cout << "Miaouuuuu\n";
 }
