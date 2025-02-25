@@ -6,7 +6,7 @@
 /*   By: lelanglo <lelanglo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 10:36:45 by lelanglo          #+#    #+#             */
-/*   Updated: 2025/02/25 10:26:51 by lelanglo         ###   ########.fr       */
+/*   Updated: 2025/02/25 11:10:46 by lelanglo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@
 # define KWHT "\x1B[37m"
 
 class Animal
-{
+{	
 	protected:
 	std::string _type;
-
-	public:
 	Animal();
 	Animal(const Animal &copy);
+
+	public:
 	virtual ~Animal();
 	Animal &operator=(const Animal &other);
 	virtual void makeSound() const;
