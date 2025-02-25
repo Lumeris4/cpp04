@@ -6,7 +6,7 @@
 /*   By: lelanglo <lelanglo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 10:42:00 by lelanglo          #+#    #+#             */
-/*   Updated: 2025/02/24 13:05:39 by lelanglo         ###   ########.fr       */
+/*   Updated: 2025/02/25 10:29:15 by lelanglo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Animal::Animal(): _type("other")
 
 Animal::~Animal()
 {
-	std::cout << "Destructor for Animal called\n";
+	std::cout << KMAG "Destructor for Animal called\n" KNRM;
 }
 
 Animal::Animal(const Animal &copy)

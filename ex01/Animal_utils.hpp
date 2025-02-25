@@ -6,15 +6,18 @@
 /*   By: lelanglo <lelanglo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 10:56:13 by lelanglo          #+#    #+#             */
-/*   Updated: 2025/02/24 13:01:11 by lelanglo         ###   ########.fr       */
+/*   Updated: 2025/02/25 10:12:26 by lelanglo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Dog: public Animal
 {
+	private:
+	Brain *_Brain;
 	public:
 	Dog();
 	Dog(const Dog &copy);
@@ -25,6 +28,8 @@ class Dog: public Animal
 
 class Cat: public Animal
 {
+	private:
+	Brain *_Brain;
 	public:
 	Cat();
 	Cat(const Cat &copy);

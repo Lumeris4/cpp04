@@ -6,7 +6,7 @@
 /*   By: lelanglo <lelanglo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 10:34:02 by lelanglo          #+#    #+#             */
-/*   Updated: 2025/02/24 14:14:35 by lelanglo         ###   ########.fr       */
+/*   Updated: 2025/02/25 10:25:34 by lelanglo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,15 @@
 
 int main()
 {
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound();
-	j->makeSound();
-	meta->makeSound();
-	delete meta;
-	delete j;
-	delete i;
-	
-	std::cout << "\n\ntest Wrong\n\n";
-	
-	const WrongAnimal* k = new WrongAnimal();
-	const WrongAnimal* g = new WrongCat();
-	std::cout << k->getType() << " " << std::endl;
-	std::cout << g->getType() << " " << std::endl;
-	k->makeSound();
-	g->makeSound();
-	delete g;
-	delete k;
+	Animal *tab[20];
+	for (int i = 0; i < 20; i++)
+	{
+		if (i % 2 == 0)
+			tab[i] = new Dog();
+		else
+			tab[i] = new Cat();
+	}
+	for (int j = 0; j < 20; j++)
+		delete tab[j];
+	return 0;
 }

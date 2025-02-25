@@ -6,7 +6,7 @@
 /*   By: lelanglo <lelanglo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 11:07:29 by lelanglo          #+#    #+#             */
-/*   Updated: 2025/02/24 12:57:38 by lelanglo         ###   ########.fr       */
+/*   Updated: 2025/02/25 10:28:48 by lelanglo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Dog::Dog(): Animal()
 {
+	this->_Brain = new Brain;
 	Animal::_type = "Dog";
 	std::cout << "Dog constructor called\n";
 }
@@ -33,7 +34,8 @@ Dog &Dog::operator=(const Dog &other)
 
 Dog::~Dog()
 {
-	std::cout << "Destrucor Dog called\n";
+	delete this->_Brain;
+	std::cout << KGRN "Destrucor Dog called\n" KNRM;
 }
 
 void Dog::makeSound() const
@@ -43,6 +45,7 @@ void Dog::makeSound() const
 
 Cat::Cat(): Animal()
 {
+	this->_Brain = new Brain;
 	Animal::_type = "Cat";
 	std::cout << "Cat constructor called\n";
 }
@@ -62,7 +65,8 @@ Cat &Cat::operator=(const Cat &other)
 
 Cat::~Cat()
 {
-	std::cout << "Destrucor Cat called\n";
+	delete this->_Brain;
+	std::cout << KRED "Destrucor Cat called\n" KNRM;
 }
 
 void Cat::makeSound() const

@@ -6,13 +6,13 @@
 /*   By: lelanglo <lelanglo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 14:32:26 by lelanglo          #+#    #+#             */
-/*   Updated: 2025/02/24 15:01:17 by lelanglo         ###   ########.fr       */
+/*   Updated: 2025/02/25 09:58:02 by lelanglo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Brain.hpp"
 
-Brain::Brain():
+Brain::Brain()
 {
 	std::cout << "Brain Constructor called\n";
 }
@@ -31,6 +31,25 @@ Brain::Brain(const Brain &copy)
 Brain &Brain::operator=(const Brain &other)
 {
 	std::cout << "Operator Brain called\n";
-	this_ideas = other._ideas;
+	for(int i = 0; i < 100; i++)
+		if(other._ideas->length() > 0)
+			this->_ideas[i].assign(other._ideas[i]);
 	return (*this);
+}
+
+const std::string	Brain::getIdeas(unsigned int index) const
+{
+	if (index < 100)
+		return(this->_ideas[index]);
+	else
+		return ("There is only 100 ideas per brain.");
+}
+
+void	Brain::setIdeas(unsigned int index, std::string idea)
+{
+	if (index < 100)
+		this->_ideas[index] = idea;
+	else
+		std::cout << "There is only 100 ideas per brain." << std::endl;
+	return ;
 }
