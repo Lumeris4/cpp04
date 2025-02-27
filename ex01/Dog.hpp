@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lelanglo <lelanglo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/24 10:34:02 by lelanglo          #+#    #+#             */
-/*   Updated: 2025/02/27 09:15:03 by lelanglo         ###   ########.fr       */
+/*   Created: 2025/02/27 09:11:27 by lelanglo          #+#    #+#             */
+/*   Updated: 2025/02/27 09:11:29 by lelanglo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
-#include "Cat.hpp"
-#include "WrongCat.hpp"
+#pragma once
+#include "Animal.hpp"
+#include "Brain.hpp"
 
-int main()
+class Dog: public Animal
 {
-	Animal *tab[20];
-	for (int i = 0; i < 20; i++)
-	{
-		if (i % 2 == 0)
-			tab[i] = new Dog();
-		else
-			tab[i] = new Cat();
-	}
-	for (int j = 0; j < 20; j++)
-	{
-		tab[j]->makeSound();
-		delete tab[j];
-	}
-	return 0;
-}
+	private:
+	Brain *_Brain;
+	public:
+	Dog();
+	Dog(const Dog &copy);
+	Dog &operator=(const Dog &other);
+	~Dog();
+	void makeSound() const;
+};
