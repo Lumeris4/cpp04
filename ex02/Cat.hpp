@@ -6,7 +6,7 @@
 /*   By: lelanglo <lelanglo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 09:12:47 by lelanglo          #+#    #+#             */
-/*   Updated: 2025/02/27 09:13:22 by lelanglo         ###   ########.fr       */
+/*   Updated: 2025/02/27 11:14:53 by lelanglo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,6 @@ class Cat: public Animal
 	Cat &operator=(const Cat &other);
 	~Cat();
 	void makeSound() const;
+	void Setideas(int i, std::string ideas);
+	std::string GetIdeas(int i);
 };

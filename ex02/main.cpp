@@ -6,7 +6,7 @@
 /*   By: lelanglo <lelanglo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 10:34:02 by lelanglo          #+#    #+#             */
-/*   Updated: 2025/02/27 09:21:06 by lelanglo         ###   ########.fr       */
+/*   Updated: 2025/02/27 11:20:20 by lelanglo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 int main()
 {
-	//Animal failure;
+	//Animal animal;
 	Animal *tab[20];
 	for (int i = 0; i < 20; i++)
 	{
@@ -30,5 +30,12 @@ int main()
 		tab[j]->makeSound();
 		delete tab[j];
 	}
+	std::cout << KBLU "\n--------------Copy test--------------\n" KNRM;
+	Dog *dog = new Dog();
+	Dog *copy(dog);
+	dog->Setideas(0, "HUngry");
+	std::cout << "ideas " << dog->GetIdeas(0) << std::endl;
+	std::cout << "ideas " << copy->GetIdeas(0) << std::endl;
+	delete dog;
 	return 0;
 }

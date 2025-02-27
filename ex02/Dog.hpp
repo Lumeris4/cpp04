@@ -6,7 +6,7 @@
 /*   By: lelanglo <lelanglo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 09:11:27 by lelanglo          #+#    #+#             */
-/*   Updated: 2025/02/27 09:11:29 by lelanglo         ###   ########.fr       */
+/*   Updated: 2025/02/27 10:56:16 by lelanglo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,6 @@ class Dog: public Animal
 	Dog &operator=(const Dog &other);
 	~Dog();
 	void makeSound() const;
+	void Setideas(int i, std::string ideas);
+	std::string GetIdeas(int i);
 };

@@ -6,7 +6,7 @@
 /*   By: lelanglo <lelanglo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 10:36:45 by lelanglo          #+#    #+#             */
-/*   Updated: 2025/02/25 11:10:46 by lelanglo         ###   ########.fr       */
+/*   Updated: 2025/02/27 11:19:37 by lelanglo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 # define KWHT "\x1B[37m"
 
 class Animal
-{	
+{
 	protected:
 	std::string _type;
 	Animal();
