@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal_utils.hpp                                   :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lelanglo <lelanglo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/24 10:56:13 by lelanglo          #+#    #+#             */
-/*   Updated: 2025/02/24 13:01:11 by lelanglo         ###   ########.fr       */
+/*   Created: 2025/02/27 09:06:13 by lelanglo          #+#    #+#             */
+/*   Updated: 2025/02/27 09:06:15 by lelanglo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,5 @@ class Dog: public Animal
 	Dog(const Dog &copy);
 	Dog &operator=(const Dog &other);
 	~Dog();
-	void makeSound() const;
-};
-
-class Cat: public Animal
-{
-	public:
-	Cat();
-	Cat(const Cat &copy);
-	Cat &operator=(const Cat &other);
-	~Cat();
 	void makeSound() const;
 };

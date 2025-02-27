@@ -6,11 +6,12 @@
 /*   By: lelanglo <lelanglo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 10:34:02 by lelanglo          #+#    #+#             */
-/*   Updated: 2025/02/24 14:14:35 by lelanglo         ###   ########.fr       */
+/*   Updated: 2025/02/27 09:07:57 by lelanglo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal_utils.hpp"
+#include "Dog.hpp"
+#include "Cat.hpp"
 #include "WrongCat.hpp"
 
 int main()

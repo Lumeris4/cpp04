@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal_utils.cpp                                   :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lelanglo <lelanglo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/24 11:07:29 by lelanglo          #+#    #+#             */
-/*   Updated: 2025/02/24 12:57:38 by lelanglo         ###   ########.fr       */
+/*   Created: 2025/02/27 09:06:01 by lelanglo          #+#    #+#             */
+/*   Updated: 2025/02/27 09:06:28 by lelanglo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal_utils.hpp"
+#include "Dog.hpp"
 
 Dog::Dog(): Animal()
 {
@@ -39,33 +39,4 @@ Dog::~Dog()
 void Dog::makeSound() const
 {
 	std::cout << "OUAF OUAF\n";
-}
-
-Cat::Cat(): Animal()
-{
-	Animal::_type = "Cat";
-	std::cout << "Cat constructor called\n";
-}
-
-Cat::Cat(const Cat &copy): Animal(copy)
-{
-	std::cout << "Cat constructor copy\n";
-	*this = copy;
-}
-
-Cat &Cat::operator=(const Cat &other)
-{
-	this->_type = other._type;
-	std::cout << "Operator Cat called\n";
-	return (*this);
-}
-
-Cat::~Cat()
-{
-	std::cout << "Destrucor Cat called\n";
-}
-
-void Cat::makeSound() const
-{
-	std::cout << "Miaouuuuu\n";
 }
