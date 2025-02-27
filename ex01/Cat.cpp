@@ -6,7 +6,7 @@
 /*   By: lelanglo <lelanglo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 09:12:12 by lelanglo          #+#    #+#             */
-/*   Updated: 2025/02/27 09:13:35 by lelanglo         ###   ########.fr       */
+/*   Updated: 2025/02/27 11:15:19 by lelanglo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,23 @@ Cat::~Cat()
 void Cat::makeSound() const
 {
 	std::cout << "Miaouuuuu\n";
+}
+
+void Cat::Setideas(int i, std::string ideas)
+{
+	if (i > 99)
+	{
+		std::cout << "An animal have 100 ideas max\n";
+		return;
+	}
+	this->_Brain->Setideas(i, ideas);
+}
+
+std::string Cat::GetIdeas(int i)
+{
+	if (i > 99)
+	{
+		return ("An animal have 100 ideas max\n");
+	}
+	return(this->_Brain->GetIdeas(i));
 }

@@ -6,7 +6,7 @@
 /*   By: lelanglo <lelanglo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 14:32:26 by lelanglo          #+#    #+#             */
-/*   Updated: 2025/02/25 10:55:02 by lelanglo         ###   ########.fr       */
+/*   Updated: 2025/02/27 10:54:45 by lelanglo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,14 @@ Brain &Brain::operator=(const Brain &other)
 		if(other._ideas->length() > 0)
 			this->_ideas[i].assign(other._ideas[i]);
 	return (*this);
+}
+
+void Brain::Setideas(int i, std::string ideas)
+{
+	this->_ideas[i] = ideas;
+}
+
+std::string Brain::GetIdeas(int i)
+{	
+	return (this->_ideas[i]);
 }

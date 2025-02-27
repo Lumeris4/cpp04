@@ -6,7 +6,7 @@
 /*   By: lelanglo <lelanglo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 09:11:08 by lelanglo          #+#    #+#             */
-/*   Updated: 2025/02/27 09:16:13 by lelanglo         ###   ########.fr       */
+/*   Updated: 2025/02/27 11:12:27 by lelanglo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,23 @@ Dog::~Dog()
 void Dog::makeSound() const
 {
 	std::cout << "OUAF OUAF\n";
+}
+
+void Dog::Setideas(int i, std::string ideas)
+{
+	if (i > 99)
+	{
+		std::cout << "An animal have 100 ideas max\n";
+		return;
+	}
+	this->_Brain->Setideas(i, ideas);
+}
+
+std::string Dog::GetIdeas(int i)
+{
+	if (i > 99)
+	{
+		return ("An animal have 100 ideas max\n");
+	}
+	return(this->_Brain->GetIdeas(i));
 }
